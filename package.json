@@ -8,6 +8,7 @@
   "private": true,
   "dependencies": {
     "jest": "^24.1.0",
-    "jest-cli": "^24.1.0"
+    "jest-cli": "^24.1.0",
+    "moment": "^2.24.0"
   }
 }
