@@ -1,4 +1,4 @@
-const mockTestUtil = jest.fn(() => "ugh");
+const mockPrefixUtil = jest.fn(() => "ugh");
 
-module.exports.testUtil = mockTestUtil;
+module.exports.prefixUtil = mockPrefixUtil;
 

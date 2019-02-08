@@ -1,16 +1,15 @@
 const index = require("../index");
-const testIndex = index.testIndex;
 const util = require("../util");
 
 jest.mock("../util");
 
-describe("testIndex() tests", function () {
-    test("testIndex() calls testUtil", () =>{
+describe("addStuff() tests", function () {
+    test("addStuff() calls prefixUtil", () =>{
         const testInput = "foo";
         const targetOutput = "ughmod";
-        const testOutput = testIndex(testInput);
+        const testOutput = index.addStuff(testInput);
 
         expect(testOutput).toEqual(targetOutput);
-        expect(util.testUtil).toHaveBeenCalledTimes(1);
+        expect(util.prefixUtil).toHaveBeenCalledTimes(1);
     });
 });
