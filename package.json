@@ -1,0 +1,13 @@
+{
+  "name": "jest_test",
+  "version": "0.0.1",
+  "description": "Jest test",
+  "main": "index.js",
+  "author": "Angus Grieve-Smith",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jest": "^24.1.0",
+    "jest-cli": "^24.1.0"
+  }
+}
