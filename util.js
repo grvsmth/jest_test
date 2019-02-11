@@ -1,4 +1,3 @@
-const prefixUtil = function(inputString) {
+export function prefixUtil(inputString) {
     return "prefix" + inputString;
 }
-module.exports.prefixUtil = prefixUtil;

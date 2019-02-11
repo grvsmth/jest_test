@@ -1,12 +1,10 @@
 // Index
 
-const util = require("./util");
+import {prefixUtil} from "./util";
 
-const addStuff = function(inputString) {
+export function addStuff(inputString) {
     const modifiedInput = inputString + "x5";
-    const utilOutput = util.prefixUtil(modifiedInput);
+    const utilOutput = prefixUtil(modifiedInput);
     const modifiedOutput = utilOutput + "mod";
     return modifiedOutput;
 }
-
-module.exports.addStuff = addStuff;
