@@ -1,7 +1,7 @@
 const dates = require("../dates");
-const Moment = require("moment");
+const Moment = require("../node_modules/moment/moment.js");
 
-jest.mock("moment");
+jest.mock("../node_modules/moment/moment.js");
 
 describe("dates tests", function () {
     test("dates.extractHour() calls Moment", () =>{
