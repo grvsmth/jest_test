@@ -10,7 +10,21 @@ const config = {
         "path": build_dir,
         "filename": "index.bundle.js"
     },
-    "mode": "development"
+    "mode": "development",
+    "module": {
+        "rules": [
+            {
+                "test": /\.js?/,
+                "exclude": /node_modules/,
+                "use": {
+                    "loader": "babel-loader",
+                    "options": {
+                        "presets": ["@babel/preset-env"]
+                    }
+                }
+            }
+        ]
+    }
 };
 
 module.exports = config;
