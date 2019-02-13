@@ -1,4 +1,4 @@
-const dates = require("../dates");
+const dates = require("../../src/dates");
 const Moment = require("moment");
 
 jest.mock("moment");
