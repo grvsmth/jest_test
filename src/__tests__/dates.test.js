@@ -1,11 +1,7 @@
-const momentFilePath = "../../node_modules/moment/moment.js";
+const dates = require("../../src/dates");
+const Moment = require("moment");
 
-const dates = require("../dates");
-const Moment = require(momentFilePath);
-
-jest.mock(momentFilePath);
-
-console.log(Moment);
+jest.mock("moment");
 
 describe("dates tests", function () {
     test("dates.extractHour() calls Moment", () =>{
