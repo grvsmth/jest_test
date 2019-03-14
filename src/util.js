@@ -14,4 +14,4 @@ const exportFunctions = {
     prefixUtil,
     doublePrefixUtil
 }
-export default exportFunctions;
+module.exports = exportFunctions;
