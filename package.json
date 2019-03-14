@@ -1,14 +1,27 @@
 {
-  "name": "jest_test",
-  "version": "0.0.1",
-  "description": "Jest test",
-  "main": "index.js",
-  "author": "Angus Grieve-Smith",
-  "license": "MIT",
-  "private": true,
-  "dependencies": {
-    "jest": "^24.1.0",
-    "jest-cli": "^24.1.0",
-    "moment": "^2.24.0"
-  }
+    "name": "jest_test",
+    "version": "0.0.1",
+    "description": "Jest test",
+    "main": "index.js",
+    "author": "Angus Grieve-Smith",
+    "license": "MIT",
+    "private": false,
+    "dependencies": {
+        "@babel/core": "^7.2.2",
+        "@babel/preset-env": "^7.3.1",
+        "@babel/preset-react": "^7.0.0",
+        "moment": "^2.24.0",
+        "react": "^16.8.1"
+    },
+    "repository": "https://github.com/grvsmth/jest_test.git",
+    "devDependencies": {
+        "babel-jest": "^24.1.0",
+        "jest": "^24.1.0",
+        "webpack": "^4.29.3",
+        "webpack-cli": "^3.2.3"
+    },
+    "jest": {
+        "moduleFileExtensions": ["js", "jsx"],
+        "moduleDirectories": ["node_modules"]
+    }
 }
