@@ -1,14 +1,15 @@
 const index = require("../index");
-const testIndex = index.testIndex;
+const util = require("../util");
 
-jest.mock("../util", () => { return {"testUtil": jest.fn(() => "bar")}; });
+jest.mock("../util");
 
-describe("testIndex() tests", function () {
-    test("testIndex() calls testUtil", () =>{
+describe("addStuff() tests", function () {
+    test("addStuff() calls prefixUtil", () =>{
         const testInput = "foo";
-        const targetOutput = "barmod";
-        const testOutput = testIndex(testInput);
+        const targetOutput = "ughmod";
+        const testOutput = index.addStuff(testInput);
 
         expect(testOutput).toEqual(targetOutput);
+        expect(util.prefixUtil).toHaveBeenCalledTimes(1);
     });
 });
