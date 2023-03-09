@@ -1,17 +1,15 @@
-function prefixUtil(inputString) {
-    return "prefix" + inputString;
-}
+const exports = {
+    "prefixUtil": function(inputString) {
+        return "prefix" + inputString;
+    }
+};
 
-function doublePrefixUtil(inputString) {
+exports.doublePrefixUtil = function(inputString) {
     let outputString = inputString;
     for (let i = 0; i < 2; i++) {
-        outputString = exportFunctions.prefixUtil(outputString);
+        outputString = exports.prefixUtil(outputString);
     }
     return outputString;
 }
 
-const exportFunctions = {
-    prefixUtil,
-    doublePrefixUtil
-}
-module.exports = exportFunctions;
+export default exports;

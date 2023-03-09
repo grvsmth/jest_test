@@ -1,11 +1,13 @@
-import util from "../util";
-
-// jest.mock("../util");
+import {jest} from '@jest/globals';
 
 describe("prefixUtil() tests", function () {
-    test("prefixUtil() prefixes", () =>{
+    test("prefixUtil() prefixes", async () =>{
         const testInput = "foo";
         const targetOutput = "prefixfoo";
+
+        const utilModule = await import("../util.js");
+        const util = utilModule.default;
+
         const testOutput = util.prefixUtil(testInput);
 
         expect(testOutput).toEqual(targetOutput);
@@ -14,13 +16,15 @@ describe("prefixUtil() tests", function () {
 
 describe("doublePrefixUtil() tests", function () {
 
-    let mockPrefixUtil = jest.fn();
-    
-    test("doublePrefixUtil() prefixes twice", () =>{
+    test("doublePrefixUtil() prefixes twice", async () =>{
         const testInput = "foo";
         const targetOutput = "mockPrefixOutput";
 
-        util.prefixUtil = jest.fn().mockReturnValue(targetOutput);
+        const utilModule = await import("../util.js")
+        const util = utilModule.default;
+
+        const mockPrefixUtil = jest.spyOn(util, "prefixUtil")
+            .mockReturnValue(targetOutput);
         
         const testOutput = util.doublePrefixUtil(testInput);
 

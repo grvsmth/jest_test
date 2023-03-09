@@ -1,6 +1,6 @@
 // Index
 
-import util from "./util";
+import util from "./util.js";
 
 export function addStuff(inputString) {
     const modifiedInput = inputString + "x5";
